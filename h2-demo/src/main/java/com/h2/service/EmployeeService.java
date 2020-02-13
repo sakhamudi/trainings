@@ -16,4 +16,6 @@ public interface EmployeeService {
     public void updateEmployee(Employee employee);
 
     public  List<Employee> retrieveEmployees(String name);
+
+    public  List<Employee> retrieveEmployees(String name,String salary);
 }

@@ -43,6 +43,11 @@ public class EmployeeRestController {
         return employeeService.retrieveEmployees(employeeName);
     }
 
+    @GetMapping("/api/employees/name/{name}/salary/{dept}")
+    public List<Employee> getEmployee(@PathVariable(name="name")String name,@PathVariable(name="dept")String dept) {
+        return employeeService.retrieveEmployees(name,dept);
+    }
+
     @PostMapping("/api/employees")
     public void saveEmployee(Employee employee){
         employeeService.saveEmployee(employee);
